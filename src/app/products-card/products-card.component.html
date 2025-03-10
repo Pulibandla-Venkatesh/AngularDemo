@@ -1,0 +1,19 @@
+<div class="main-card">
+    <div class="img">
+        <img [src]="'../assets/' + product.imageUrl" [alt]="product.productName"/>
+    </div>
+    <div class="details">
+        <div class="name-details">
+            <div class="name">
+                <span>{{product.productName}}</span>
+            </div>
+            <div class="prod-details">
+                <span> $ {{product.price | number:'1.2-2'}}</span>
+            </div>
+        </div>
+        <div class="Price">
+            <button  (click)="viewProduct(this.product)">View</button>
+            <!-- <nav><button routerLink = "viewproduct" >View</button></nav> -->
+        </div>
+    </div>
+</div>

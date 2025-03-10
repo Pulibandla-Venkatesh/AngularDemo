@@ -1,0 +1,39 @@
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    background-color: blueviolet;
+    height: 50px;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+.E-Commerce{
+    padding: 15px;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: aliceblue;
+    cursor: pointer;
+}
+.sub-nav{
+    display: flex;
+    flex-direction: row;
+}
+.Cart {
+    padding: 15px;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: aliceblue;
+    cursor: pointer;
+}
+.Logout{
+    padding: 15px;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: aliceblue;
+}
+
+.search{
+    padding: 15px;
+    color: aliceblue;
+}
+
+

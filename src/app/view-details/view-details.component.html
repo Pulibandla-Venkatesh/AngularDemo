@@ -1,0 +1,20 @@
+<div class="mainDiv">
+    <div class="Img">
+        <img [src]="'../assets/' + productDetail.imageUrl" alt="">
+    </div>
+    <div class="details">
+        <div class="name">Name: {{productDetail.productName}}</div>
+        <div class="desc">Description: {{productDetail.description}}</div>
+        <div class="price">Price: $ {{productDetail.price | number:'1.2-2'}}</div>
+        <div class="quantity" >Quantity: 
+            <span>
+            <button (click)="downCount()">-</button>&nbsp;
+            <input type="text" [(ngModel)] = "quantity"/>&nbsp;
+            <button (click)="upCount()">+</button>
+            </span>
+        </div>
+        <div class="totalPrice">Total Price: $ {{productDetail.price * quantity | number:'1.2-2'}}</div>
+        <button class="addtocart" (click)="addtocart()">Add To Cart</button>
+        <button class="back" (click)="backtoproducts()">Back</button>
+    </div>
+</div>

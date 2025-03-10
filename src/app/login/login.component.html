@@ -1,0 +1,20 @@
+
+<form (ngSubmit)="toLogin(myForm)" #myForm="ngForm">
+    <div class="mainLogin">
+        <div class="Email">
+        <label for="email">Email</label>
+        <input type="text" placeholder="abc@gmail.com" name="Email" ngModel>
+        </div>
+        <div class="Password">
+        <label for="password">Password</label>
+        <input type="text" placeholder="Enter Password" name="Password" ngModel>
+        </div>
+        <div class="loginButton">
+        <button class="loginButton" type="submit">Login</button>
+        </div>
+
+        <span>Do not have an account? <a href="Signup" (click)="toSignup()">Sign Up !</a></span>
+            
+    </div>
+</form>
+

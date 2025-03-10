@@ -1,0 +1,23 @@
+<form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+    <div class="mainLogin">
+        <div class="Email">
+        <label for="email">Email</label>
+        <input type="email" id = "email" name="Email" placeholder="abc@gmail.com" ngModel>
+        </div>
+        <div class="Password">
+        <label for="password">Password</label>
+        <input type="password" id = "password" name = "Password" placeholder="Enter Password" ngModel>
+        </div>
+        <div class="FullName">
+        <label for="FullName">Full Name</label>
+        <input type="text" id = "FullName" name = "UserName" placeholder="Enter Full Name" ngModel>
+        </div>
+        <div class="MobileNumber">
+        <label for="MobileNumber">Mobile Number</label>
+        <input type="text" id = "MobileNumber" name = "MobileNumber" placeholder="Enter Mobile Number" ngModel>
+        </div>
+        
+        <button  type="submit">Sign Up</button>      
+    </div>
+
+</form>

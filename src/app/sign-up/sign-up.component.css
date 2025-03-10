@@ -1,0 +1,28 @@
+.mainLogin{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    justify-self: center;
+    margin-top: 100px;
+    border-color: 10px solid rgb(160, 106, 160);
+    width: 300px;
+    height: 300px;
+
+}
+
+.Email,.Password, .FullName, .MobileNumber{
+    font-size: larger;
+}
+label{
+    float: left;
+}
+input{
+    float: right;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.loginButton{
+    width: 80px;
+    height: 30px;
+}
