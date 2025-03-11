@@ -1,8 +1,7 @@
 <div class="nav-bar">
     <div class="E-Commerce" (click)="backtoproducts()">E-Commerce</div>
     <div class="sub-nav">
-        <div class="search"><input type="text" name = "searchText" placeholder="search" [(ngModel)] = "searchText" /></div>
-        <div class="search"><button (click)="onSearchChange()">Search</button></div>
+        <div class="search"><input type="text" name = "searchText" placeholder="search" [(ngModel)] = "searchText" (ngModelChange)="onChange($event)"/></div>
         <div class="Cart" (click)="gotocart()">Cart</div>
         <div class="Logout" (click)="logout()">Logout</div>
 
