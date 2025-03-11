@@ -16,12 +16,17 @@ export class NavBarComponent {
 
   searchText = '';
 
-  onSearchChange(){
-    console.log('x');
-    //this.SendText.emit(this.searchText);
+  onChange(value: any){
+    console.log(value)
     this._sharedService.SharedSearch = this.searchText;
-    console.log(this._sharedService.SharedSearch, "x");
   }
+
+  // onSearchChange(){
+  //   console.log('x');
+  //   //this.SendText.emit(this.searchText);
+  //   this._sharedService.SharedSearch = this.searchText;
+  //   console.log(this._sharedService.SharedSearch, "x");
+  // }
 
   backtoproducts(){
     this.router.navigate(['products']);
