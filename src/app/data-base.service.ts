@@ -32,7 +32,11 @@ export class DatabaseService {
     addtoCart(data: any){
         console.log("data before post", data)
         var url ='https://localhost:44345/api/CartModels';
-        return this._http.post(url, data)
+        const headers = {
+            'Authorization': `Bearer ${localStorage.getItem('authToken')}`, // Attach token
+            'Content-Type': 'application/json'
+        };
+        return this._http.post(url, data, {headers})
     }
 
 

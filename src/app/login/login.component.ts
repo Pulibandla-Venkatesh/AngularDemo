@@ -26,6 +26,7 @@ export class LoginComponent {
     console.log(myForm.value);
     this.datasource.postLogin(myForm.value).subscribe(
       (response: any) => {
+        this.authService.setToken(response.token);
         this.authService.token = response.token;
         this.datasource.userid = response.userId;
         console.log('Response from server:', response);

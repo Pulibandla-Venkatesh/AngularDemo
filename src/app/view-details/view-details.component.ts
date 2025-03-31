@@ -56,19 +56,18 @@ export class ViewDetailsComponent {
     //   totalprice : this.quantity * this.productDetail.price
     // })
 
-
     let data  = {
-      "userId" : this.datasource.userid.toString(),
+      "userId" : this.datasource.userid.toString()?? null,
       "productId" : this.productDetail.productId,
       "productName": this.productDetail.productName,
-      "price" : (this.quantity * this.productDetail.price).toString(),
+      "price" : (this.quantity * this.productDetail.price).toString()?? null,
       "quantity" : this.quantity
     }
 
     this.datasource.addtoCart(data).subscribe(
       (response: any) => {
         console.log('Response from server:', response);
-        this.router.navigate(["/Home"]);
+        this.router.navigate(["products"]);
       },
       (error) => {
         console.error('Error during login:', error);
