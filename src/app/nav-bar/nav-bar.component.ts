@@ -38,8 +38,7 @@ export class NavBarComponent {
   }
 
   logout(){
-    this.authService.token = "";
-    this.router.navigate(['/login'])
+    this.authService.logout();
   }
 
 }

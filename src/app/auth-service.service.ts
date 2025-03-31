@@ -9,15 +9,23 @@ export class AuthServiceService {
 
   token : string = ""
 
-  isauthenticated(token: string)
-  {
-    if(token)
-    {
-      return true;
-    }
-    else{
-      return false;
-    }
+  setToken(token: string) {
+    localStorage.setItem('authToken', token);
+  }
 
+  // Retrieve token
+  getToken(): string | null {
+    return localStorage.getItem('authToken');
+  }
+
+  isauthenticated(): boolean
+  {
+    const token = this.getToken();
+    return token !== null && token !== undefined && token !== ""; // Check if token exists
+
+  }
+
+  logout() {
+    localStorage.removeItem('authToken');
   }
 }
