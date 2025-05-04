@@ -39,5 +39,12 @@ export class DatabaseService {
         return this._http.post(url, data, {headers})
     }
 
-
+    getCartItems(){
+        var url = 'https://localhost:44345/api/CartModels';
+        const headers = {
+            'Authorization': `Bearer ${localStorage.getItem('authToken')}`, // Attach token
+            'Content-Type': 'application/json'
+        };
+        return this._http.get(url, {headers})
+    }
 }

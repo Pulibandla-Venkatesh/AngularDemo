@@ -1,6 +1,27 @@
 .mainDiv{
     height: 100px;
+    width: 50%;
     background-color: blueviolet;
     margin-top: 5px;
     border-radius: 10px;    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-self: center;
 }
+
+.mainDiv.img{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    
+}
+img{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    align-self: center;
+}
+
+
+

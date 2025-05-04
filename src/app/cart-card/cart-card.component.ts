@@ -9,10 +9,13 @@ import { Component, Input } from '@angular/core';
 })
 export class CartCardComponent {
 
-  @Input() cartItems ! : {id : string,
-    name : string,
-    image : string,
-    quantity : string,
-    totalprice : string}
+  @Input() cartItems ! : {
+    cartItemId : number,
+    price : string,
+    productId : string,
+    productName : string,
+    quantity : number,
+    userId : string
+  }
 
 }
