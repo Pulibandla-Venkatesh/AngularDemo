@@ -1,10 +1,10 @@
 <div class="mainDiv">
-    <div class="img"><img [src]="'../assets/' + cartItems.image" alt=""/></div>
-    <div class="name">Name: {{cartItems.name}}</div>
+    <div class="img"><img [src]="'../assets/' + cartItems.productName.toLowerCase() + '.jpg'" alt=""/></div>
+    <div class="name">Name: {{cartItems.productName}}</div>
     <div class="quantity">quantity: {{cartItems.quantity}}</div>
-    <div class="totalPrice">Total Price: {{cartItems.totalprice}}</div>
-    <div class="buttons">
-        <button class="delet">Delete</button>
+    <div class="totalPrice">Total Price: {{(cartItems.quantity) * (+cartItems.price)}}</div>
+        <div class="buttons">
+        <button class="delete">Delete</button>
         <button class="checkout">Check Out</button>
     </div>
 </div>
